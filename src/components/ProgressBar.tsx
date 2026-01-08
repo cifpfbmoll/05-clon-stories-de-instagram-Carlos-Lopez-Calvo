@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ProgressBarProps {
   /** Número total de historias */
   total: number;
@@ -19,11 +17,11 @@ interface ProgressBarProps {
  * - La actual muestra el progreso real
  * - Las siguientes están vacías (0%)
  */
-export const ProgressBar: React.FC<ProgressBarProps> = ({
+export const ProgressBar = ({
   total,
   currentIndex,
   progress,
-}) => {
+}: ProgressBarProps) => {
   return (
     <div className="flex gap-1 p-2 w-full">
       {Array.from({ length: total }).map((_, index) => {

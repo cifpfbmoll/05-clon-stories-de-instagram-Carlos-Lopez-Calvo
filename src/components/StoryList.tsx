@@ -1,4 +1,3 @@
-import React from 'react';
 import { Story } from '../types';
 import { StoryCircle } from './StoryCircle';
 import { AddStoryButton } from './AddStoryButton';
@@ -19,12 +18,12 @@ interface StoryListProps {
  * - flex-shrink-0 en cada elemento evita que se compriman
  * - snap-x y snap-start proporcionan "snapping" nativo en móviles
  */
-export const StoryList: React.FC<StoryListProps> = ({
+export const StoryList = ({
   stories,
   isLoading,
   onAddStory,
   onStoryClick,
-}) => {
+}: StoryListProps) => {
   return (
     <div className="bg-black border-b border-gray-800">
       <div 

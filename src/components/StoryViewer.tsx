@@ -26,7 +26,7 @@ interface StoryViewerProps {
  * - Swipe horizontal: navegar
  * - Teclas: ←/→ para navegar, Escape para cerrar
  */
-export const StoryViewer: React.FC<StoryViewerProps> = ({
+export const StoryViewer = ({
   stories,
   currentIndex,
   progress,
@@ -36,7 +36,7 @@ export const StoryViewer: React.FC<StoryViewerProps> = ({
   onPrevious,
   onPause,
   onResume,
-}) => {
+}: StoryViewerProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number>(0);
   const touchStartY = useRef<number>(0);

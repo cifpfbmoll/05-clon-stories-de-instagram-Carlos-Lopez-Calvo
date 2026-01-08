@@ -1,0 +1,12 @@
+services:
+  instagram-stories:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: instagram-stories-clone
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Story } from '../types';
 import { getTimeRemaining } from '../utils/storage';
 
@@ -16,7 +15,7 @@ interface StoryCircleProps {
  * - El contenedor interno tiene un borde negro para crear el "gap"
  * - La imagen se muestra con object-cover para llenar el círculo
  */
-export const StoryCircle: React.FC<StoryCircleProps> = ({ story, onClick }) => {
+export const StoryCircle = ({ story, onClick }: StoryCircleProps) => {
   const timeRemaining = getTimeRemaining(story.createdAt);
   const timeString = timeRemaining.hours > 0 
     ? `${timeRemaining.hours}h` 

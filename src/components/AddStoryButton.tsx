@@ -14,10 +14,10 @@ interface AddStoryButtonProps {
  * - Al hacer clic en el botón, activamos el input programáticamente
  * - El evento onChange del input nos da el archivo seleccionado
  */
-export const AddStoryButton: React.FC<AddStoryButtonProps> = ({
+export const AddStoryButton = ({
   onFileSelect,
   isLoading = false,
-}) => {
+}: AddStoryButtonProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {

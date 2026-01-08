@@ -1,0 +1,15 @@
+services:
+  instagram-stories-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: instagram-stories-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run dev -- --host
+

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useStories } from './hooks/useStories';
 import { useStoryViewer } from './hooks/useStoryViewer';
 import { StoryList } from './components/StoryList';
